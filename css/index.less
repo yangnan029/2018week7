@@ -38,6 +38,13 @@ a{
                     a{
                         font-size: 16px;
                         color: #000;
+                        
+                    }
+                    &.active{
+                        background: #c6271a;
+                        a{
+                            color: #fff;
+                        }
                     }
                 }
             }
@@ -45,11 +52,19 @@ a{
     }
 }
 .banner{
-    img{
-        width: 100%;
-
-    }
 }
+.flexslider{position:relative; height:410px;overflow:hidden;background:url(http://www.jq22.com/demo/zfb/images/loading.gif)  left 0  no-repeat;}
+.slides{position:relative;z-index:1;}
+.slides li{height:410px;background-size: 100% 100%;}
+.flex-control-nav{position:absolute;bottom:10px;z-index:2;width:100%;text-align:center;}
+.flex-control-nav li{display:inline-block;width:14px;height:14px;margin:0 5px;*display:inline;zoom:1;}
+.flex-control-nav a{display:inline-block;width:14px;height:14px;line-height:40px;overflow:hidden;background:url(http://www.jq22.com/demo/zfb/images/dot.png) right 0 no-repeat;cursor:pointer;}
+.flex-control-nav .flex-active{background-position:0 0;}
+ 
+.flex-direction-nav{position:absolute;z-index:3;width:100%;top:45%;}
+.flex-direction-nav li a{display:block;width:50px;height:50px;overflow:hidden;cursor:pointer;position:absolute;}
+.flex-direction-nav li a.flex-prev{left:40px;background:url(http://www.jq22.com/demo/zfb/images/prev.png) center center no-repeat;}
+.flex-direction-nav li a.flex-next{right:40px;background:url(http://www.jq22.com/demo/zfb/images/next.png) center center no-repeat;}
 .list1{
     .list1_container{
         width: 1000px;
@@ -228,7 +243,7 @@ a{
             dd{
                 font-size: 12px;
                 color: #c8c8c8;
-                line-height: 1.5;
+                line-height: 2;
             }
             &.second{
                 margin-right: 85px;
@@ -237,6 +252,15 @@ a{
                 margin-right: 85px;
                 img{
                     margin-top: 40px;
+                }
+            }
+            &.contact{
+                box-sizing: border-box;
+                margin-right: 0;
+                dd{
+                    box-sizing: border-box;
+                    padding-left: 20px;
+                    background: url('../images/mobile.png') 0px center no-repeat;
                 }
             }
         }

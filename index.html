@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>index</title>
     <link rel="stylesheet" href="css/index.css">
+    <script src="http://www.jq22.com/demo/zfb/js/jquery-1.7.2.min.js"></script>
+    <script src="http://www.jq22.com/demo/zfb/js/jquery.flexslider-min.js"></script>
 </head>
 
 <body>
@@ -43,7 +45,12 @@
         </div>
     </div>
     <div class="banner">
-        <img src="images/banner.png" alt="">
+        <div class="flexslider">
+            <ul class="slides">
+                <li style="background:url('./images/banner.png') no-repeat  50% 0 ;"></li>
+                <li style="background:url('http://www.jq22.com/demo/zfb/images/img5.jpg') 50% 0 no-repeat;"></li>
+            </ul>
+        </div>
     </div>
     <div class="list1">
         <div class="list1_container">
@@ -122,7 +129,9 @@
                 <p>多年来，服务超过2000家客户</p>
                 <p>专业，诚信，高效的管理设计能力与执行能力</p>
                 <p>持续驱动百联物业管理的快速成长，实现与开发商/业主共赢的目标</p>
-                <p class="sec">我们是<span>中国商业物业专业服务商</span></p>
+                <p class="sec">我们是
+                    <span>中国商业物业专业服务商</span>
+                </p>
                 <span class="online">在线留言</span>
             </div>
         </div>
@@ -153,7 +162,7 @@
                 <dd>百联集团</dd>
                 <dd>百联股份</dd>
             </dl>
-            <dl>
+            <dl class="contact">
                 <dt>联系我们</dt>
                 <dd>电话：021-63623124</dd>
                 <dd>传真：201-63220872</dd>
@@ -162,8 +171,20 @@
         </div>
     </div>
     <div class="copyright">
-        <p>Copyright © 2004 - 2014 XXXXXXX管理有限公司  All Right Reserved.   沪ICP备05027423号 </p>
+        <p>Copyright © 2004 - 2014 XXXXXXX管理有限公司 All Right Reserved. 沪ICP备05027423号 </p>
     </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.flexslider').flexslider({
+                directionNav: true,
+                pauseOnAction: false
+            });
+        });
+        $('.top_list li').on('click', function addClass() {
+            $(this).siblings().removeClass('active');
+            $(this).addClass('active');
+        })
+    </script>
 </body>
 
 </html>
